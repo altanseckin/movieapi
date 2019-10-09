@@ -30,7 +30,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', index);
 app.use('/api/movies', movie);
-
+ 
 // catch 404 and forward to error handler
 app.use((req, res, next) =>{
   next(createError(404));
@@ -47,4 +47,4 @@ app.use(function(err, req, res, next) {
   res.json({ error:err.message });
 });
 
-module.exports = app;
+module.exports = app
